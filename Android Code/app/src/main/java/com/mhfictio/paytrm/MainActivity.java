@@ -23,7 +23,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static  final String MID="IdKFwp30847595727216";
+    private static  final String MID="iSJxpD28333272182391";
     private static  final String CHANNEL_ID="WAP";
     private static  final String industrie="Retail";
     @Override
