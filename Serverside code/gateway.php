@@ -1,12 +1,12 @@
 <?php
 
 require_once("./PaytmChecksum.php");
-    
-    
+
+
     $mid = $_POST['MID'];
     $order = $_POST['ORDERID'];
     $paytmParams = array();
-    
+
 $paytmParams["MID"] =$mid;
 $paytmParams["ORDERID"] = $order;
 
@@ -17,8 +17,8 @@ $paytmParams["WEBSITE"] = $_POST['WEBSITE'];
 $paytmParams["CALLBACK_URL"] = $_POST['CALLBACK_URL'];
 $paytmParams["INDUSTRY_TYPE_ID"] = $_POST['INDUSTRY_TYPE_ID'];
 
-$paytmChecksum = PaytmChecksum::generateSignature($paytmParams, 'qIem4ome7penC0Js');
-$verifySignature = PaytmChecksum::verifySignature($paytmParams, 'qIem4ome7penC0Js', $paytmChecksum);
+$paytmChecksum = PaytmChecksum::generateSignature($paytmParams, 'vHdnEhtJDK%yUN2z');
+$verifySignature = PaytmChecksum::verifySignature($paytmParams, 'vHdnEhtJDK%yUN2z', $paytmChecksum);
 
 $response["token"] = $paytmChecksum;
 $response["status"]= $verifySignature;
